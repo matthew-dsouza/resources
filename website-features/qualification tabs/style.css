@@ -1,0 +1,265 @@
+#qualification_container {
+  width: 100%;
+}
+
+.qualification_container {
+  color: white;
+  background-color: rgb(24, 24, 24);
+  width: 100%;
+}
+
+.qualification_tabs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.qualification_button {
+  cursor: pointer;
+}
+
+.qualification_button:hover {
+  color: rgb(26, 186, 197);
+}
+
+.qualification_icon {
+  font-size: 1.8rem;
+  margin-right: 0.25rem;
+}
+
+.qualification_data {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+}
+
+.qualification_content {
+  /* height: 35rem; */
+  display: flex;
+}
+
+.qualification_title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.qualification_subtitle {
+  display: inline-block;
+}
+
+.qualification_calendar {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.qualification_rounder {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.qualification_line {
+  display: block;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  transform: translate(6px, -7px);
+  -webkit-transform: translate(6px, -7px);
+  -moz-transform: translate(6px, -7px);
+  -ms-transform: translate(6px, -7px);
+  -o-transform: translate(6px, -7px);
+}
+
+.qualification_container [data-content] {
+  display: none;
+}
+
+.qualification_active[data-content] {
+  display: block;
+}
+
+.qualification_button.qualification_active {
+  color: rgb(42, 225, 238);
+  /* font-size: 1.5rem; */
+}
+
+/* ================================Rushabhs' Code========================== */
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .qualification_tabs {
+    gap: 1rem;
+  }
+
+  .qualification_data {
+    gap: 0.5rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 568px) {
+  .qualification_sections {
+    display: grid;
+    grid-template-columns: 0.6fr;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .qualification_tabs {
+    justify-content: center;
+  }
+
+  .qualification_button {
+    margin: 0 1.5rem;
+  }
+
+  .qualification_sections {
+    grid-template-columns: 0.5fr;
+  }
+}
+
+/* 
+
+
+    LAPTOPS & BIGGER SCREENS 
+
+
+
+*/
+@media only screen and (min-width: 1024px) {
+  #qualification_container {
+    padding: 5.5rem 0;
+  }
+
+  .qualification_content {
+    /* height: 32rem; */
+    display: flex;
+    margin: 0 1rem;
+  }
+
+  .qualification_subtitle {
+    margin-bottom: 1rem;
+  }
+
+  .qualification_text {
+    margin-bottom: 4rem;
+  }
+
+  .qualification_button {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .qualification_button:hover {
+    font-size: 2rem;
+    transition: 0.3s;
+  }
+
+  .qualification_button.qualification_active {
+    font-size: 2rem;
+  }
+
+  .qual_txt_l {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    align-items: flex-end;
+    justify-content: end;
+  }
+
+  .qualification_container {
+    width: 100%;
+  }
+
+  .qualification_content {
+    height: auto;
+    display: flex;
+    padding: 0 2rem;
+  }
+
+  .qualification_text {
+    font-size: 1rem;
+    color: #acacac;
+    font-weight: 600;
+  }
+
+  .qualification_subtitle {
+    margin-bottom: 8px;
+  }
+
+  .qualification_text {
+    font-size: 1rem;
+    color: #acacac;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+  .qualification_button {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .qualification_button.qualification_active {
+    font-size: 1.5rem;
+  }
+}
+
+/* 
+
+
+MOBILES & TABLETS 
+
+
+
+*/
+@media only screen and (max-width: 1023px) {
+  #qualification_container {
+    margin: 100px 0;
+    padding: 5rem 0 8rem 0;
+  }
+
+  .qualification_sections {
+    margin: 0 2rem;
+  }
+
+  .qualification_content {
+    height: 33rem;
+    display: flex;
+    padding: 0 2rem;
+  }
+
+  .qualification_text {
+    font-size: 1rem;
+    color: #acacac;
+    font-weight: 600;
+  }
+
+  .qualification_subtitle {
+    margin-bottom: 8px;
+  }
+
+  .qualification_text {
+    font-size: 1rem;
+    color: #acacac;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+  .qualification_button {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .qualification_button.qualification_active {
+    font-size: 1.5rem;
+  }
+}

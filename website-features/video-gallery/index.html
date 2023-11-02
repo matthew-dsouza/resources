@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>index.html</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .dummy_section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            position: relative;
+            background: #000;
+        }
+
+        .container>h1 {
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+
+        .container>.video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            padding: 0.75rem;
+        }
+
+        .container>.video-container>.video {
+            height: 250px;
+            width: 350px;
+            border: 5px solid white;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .container>.video-container>.video>video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.2s linear;
+        }
+
+        .container>.video-container>.video:hover>video {
+            transform: scale(1.1);
+        }
+
+        .container .popup-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.8);
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+
+        .container .popup-video video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 5px;
+            border: 3px solid #fff;
+        }
+        
+        .container .popup-video span {
+            position: absolute;
+            top: 5px;
+            right: 20px;
+            font-size: 50px;
+            color: #fff;
+            font-weight: 700;
+            z-index: 100;
+            cursor: pointer;
+        }
+        
+        @media (min-width: 1024px) {
+            .container .popup-video video {
+                /* width: 750px; */
+                height: 35rem;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .container .popup-video video {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="dummy_section">
+
+        <div class="container">
+
+            <h1>Video Gallery</h1>
+
+            <div class="video-container">
+                <div class="video"><video src="./videos/video1.mp4" muted></video></div>
+                <div class="video"><video src="./videos/video2.mp4" muted></video></div>
+                <div class="video"><video src="./videos/video3.mp4" muted></video></div>
+            </div>
+
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="./videos/video1.mp4" autoplay controls></video>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <script>
+        var video = document.querySelector('.popup-video video');
+
+        document.querySelectorAll('.video-container video').forEach(vid => {
+            vid.onclick = () => {
+                document.querySelector('.popup-video').style.display = 'block';
+                document.querySelector('.popup-video video').src = vid.getAttribute('src');
+                video.muted = false;
+            }
+        });
+        
+        document.querySelector('.popup-video span').onclick = () => {
+            document.querySelector('.popup-video').style.display = 'none';
+            video.muted = true;
+        }
+    </script>
+</body>
+
+</html>
