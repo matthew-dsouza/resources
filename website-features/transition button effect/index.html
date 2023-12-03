@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-      .meh {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .aesthetic_button_effect_2 {
-        width: 130px;
-        height: 40px;
-        color: #ebf2ff;
-        font-weight: 500;
-        background: #1d3557;
-        cursor: pointer;
-        transition: all 0.4s ease;
-        position: relative;
-      }
+    .meh {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .aesthetic_button_effect_2:hover {
-        border: none;
-        color: #1d3557;
-        letter-spacing: 3px;
-        background: none;
-      }
+    .aesthetic_button_effect_2 {
+      width: 130px;
+      height: 40px;
+      color: #ebf2ff;
+      font-weight: 500;
+      background: #1d3557;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+    }
 
-      .aesthetic_button_effect_2:before,
-      .aesthetic_button_effect_2:after {
-        position: absolute;
-        content: "";
-        width: 0%;
-        height: 0%;
-        border: 2px solid #1d3557;
-        z-index: -1;
-        transition: all 0.3s ease;
-      }
+    .aesthetic_button_effect_2:hover {
+      border: none;
+      color: #1d3557;
+      letter-spacing: 3px;
+      background: none;
+    }
 
-      .aesthetic_button_effect_2:before {
-        top: 0;
-        left: 0;
-        border-bottom-color: transparent;
-        border-right-color: transparent;
-      }
+    .aesthetic_button_effect_2:before,
+    .aesthetic_button_effect_2:after {
+      position: absolute;
+      content: "";
+      width: 0%;
+      height: 0%;
+      border: 2px solid #1d3557;
+      z-index: -1;
+      transition: all 0.3s ease;
+    }
 
-      .aesthetic_button_effect_2:after {
-        bottom: 0;
-        right: 0;
-        border-top-color: transparent;
-        border-left-color: transparent;
-      }
+    .aesthetic_button_effect_2:before {
+      top: 0;
+      left: 0;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+    }
 
-      .aesthetic_button_effect_2:hover:before,
-      .aesthetic_button_effect_2:hover:after {
-        border-color: #1d3557;
-        height: 100%;
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="meh">
-      <button class="aesthetic_button_effect_2">Get Updates</button>
-    </div>
-  </body>
+    .aesthetic_button_effect_2:after {
+      bottom: 0;
+      right: 0;
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+
+    .aesthetic_button_effect_2:hover:before,
+    .aesthetic_button_effect_2:hover:after {
+      border-color: #1d3557;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="meh">
+    <button class="aesthetic_button_effect_2">Get Updates</button>
+  </div>
+</body>
+
 </html>
